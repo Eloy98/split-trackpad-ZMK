@@ -11,6 +11,7 @@
 &mmv {
     time-to-max-speed-ms = <500>;
     acceleration-exponent = <1>;
+    delay-ms = <0>;
 };
 
 // mouse wheel settings
@@ -23,6 +24,7 @@
 &mwh {
     time-to-max-speed-ms = <2000>;
     acceleration-exponent = <0>;
+    delay-ms = <0>;
 };
 
 / {
