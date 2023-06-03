@@ -32,7 +32,7 @@
     sck-pin = <22>; // P0.22
     dr-gpios = <&gpio0 24 GPIO_ACTIVE_HIGH>; // P0.24
 
-    trackball: trackball@0 {
+    trackpad: trackpad@0 {
         compatible = "cirque,pinnacle";
         reg = <0>;
         label = "Cirque_Trackpad";
