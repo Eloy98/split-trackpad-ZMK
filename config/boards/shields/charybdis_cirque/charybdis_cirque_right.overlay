@@ -30,6 +30,7 @@
     miso-pin = <24>; // P0.24
     mosi-pin = <9>; // P0.09
     sck-pin = <10>; // P0.10
+    ss-pin = <13>; // P0.13
 
     trackpad: trackpad@2A {
         status = "okay";
