@@ -28,8 +28,6 @@
     acceleration-exponent = <0>;
 };
 
-#define MSE     0
-
 / {
     macros {
     };
@@ -40,7 +38,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        Layer__1 {
+        Layer__mouse {
         label = "MSE";
             bindings = <
 &none  &none       &mmv MMV_U  &none       &none  &none  &none       &mwh MWH_U  &none  &none
