@@ -7,12 +7,12 @@
 &kscan0 {
     diode-direction = "col2row";
     col-gpios
-        = <&pro_micro 4 (GPIO_ACTIVE_HIGH)> // COL0 
-        , <&pro_micro 5 (GPIO_ACTIVE_HIGH)> // COL1 
-        , <&pro_micro 6 (GPIO_ACTIVE_HIGH)> // COL2 
-        , <&pro_micro 7 (GPIO_ACTIVE_HIGH)> // COL3 
-	, <&pro_micro 8 (GPIO_ACTIVE_HIGH)> // COL1 
-        , <&pro_micro 9 (GPIO_ACTIVE_HIGH)> // COL2 
+        = <&pro_micro 1 (GPIO_ACTIVE_HIGH)> // COL0 
+        , <&pro_micro 0 (GPIO_ACTIVE_HIGH)> // COL1 
+        , <&pro_micro 2 (GPIO_ACTIVE_HIGH)> // COL2 
+        , <&pro_micro 3 (GPIO_ACTIVE_HIGH)> // COL3 
+	, <&pro_micro 4 (GPIO_ACTIVE_HIGH)> // COL1 
+        , <&pro_micro 5 (GPIO_ACTIVE_HIGH)> // COL2 
     ;
 };
 // &nice_nano_spi {
@@ -27,10 +27,9 @@
     compatible = "nordic,nrf-spim";
     status = "okay";
 
-    miso-pin = <13>; // P0.13
-    mosi-pin = <24>; // P0.24
-    sck-pin = <9>; // P0.09
-    ss-gpios = <&gpio0 10 GPIO_ACTIVE_HIGH>;// P0.10
+    miso-pin = <24>; // P0.24
+    mosi-pin = <9>; // P0.09
+    sck-pin = <10>; // P0.10
 
     trackpad: trackpad@2A {
         status = "okay";
