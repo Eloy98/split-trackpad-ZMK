@@ -25,6 +25,7 @@
         acceleration-exponent=<0>;
 };
 
+#define DEFAULT 0
 #define AS(keycode) &as LS(keycode) keycode
 
     keymap {
