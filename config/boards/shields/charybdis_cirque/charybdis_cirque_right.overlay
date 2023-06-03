@@ -24,12 +24,12 @@
 
 
 &pro_micro_spi {
+	compatible = "nordic,nrf-spim";
     status = "okay";
 
     miso-pin = <17>; // P0.17
     mosi-pin = <20>; // P0.20
     sck-pin = <22>; // P0.22
-    dr-gpios = <&gpio0 1 GPIO_ACTIVE_HIGH>; // P0.24
 
     trackpad: trackpad@2A {
         compatible = "cirque,pinnacle";
