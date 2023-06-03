@@ -23,7 +23,7 @@
 // };
 
 
-&nrfmicro_13_spi {
+&pro_micro_spi {
     compatible = "nordic,nrf-spim";
     status = "okay";
 
