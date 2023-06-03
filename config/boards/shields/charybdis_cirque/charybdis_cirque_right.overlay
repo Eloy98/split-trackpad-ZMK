@@ -37,7 +37,6 @@
         label = "Cirque_Trackpad";
         dr-gpios = <&gpio0 1 GPIO_ACTIVE_HIGH>;
         spi-max-frequency = <10000000>;
-        cpi = <600>;
     };
 };
 
