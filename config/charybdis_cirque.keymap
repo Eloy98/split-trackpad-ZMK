@@ -38,7 +38,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        Layer__mouse {
+        mouse {
         label = "MSE";
             bindings = <
 &none  &none       &mmv MMV_U  &none       &none  &none  &none       &mwh MWH_U  &none  &none
