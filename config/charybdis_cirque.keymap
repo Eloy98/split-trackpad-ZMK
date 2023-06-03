@@ -25,12 +25,6 @@
     acceleration-exponent = <0>;
 };
 
-#define DEFAULT 0
-#define NUMBER  1
-#define SYMBOL  2
-#define HOTKEY  3
-#define MSE     4
-
 #define AS(keycode) &as LS(keycode) keycode
 
 / {
