@@ -33,6 +33,127 @@
 
 #define AS(keycode) &as LS(keycode) keycode
 
+/ {
+    macros {
+        copy: copy {
+            label = "fuzhi";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp C>,
+                <&macro_release>,
+                <&kp LCTRL>;
+        };
+        cut: cut {
+            compatible = "zmk,behavior-macro";
+            label = "jianqie";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp X>,
+                <&macro_release>,
+                <&kp LCTRL>;
+        };
+        paste: paste {
+            compatible = "zmk,behavior-macro";
+            label = "zhantie";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp V>,
+                <&macro_release>,
+                <&kp LCTRL>;
+        };
+        all: all {
+            compatible = "zmk,behavior-macro";
+            label = "quanxuan";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp A>,
+                <&macro_release>,
+                <&kp LCTRL>;
+        };
+        home: home {
+            compatible = "zmk,behavior-macro";
+            label = "zhuomian";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI>,
+                <&macro_tap>,
+                <&kp D>,
+                <&macro_release>,
+                <&kp LEFT_GUI>;
+        };
+        print: print {
+            compatible = "zmk,behavior-macro";
+            label = "jietu";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI &kp LSHFT>,
+                <&macro_tap>,
+                <&kp S>,
+                <&macro_release>,
+                <&kp LEFT_GUI &kp LSHFT>;
+        };
+        undo: undo {
+            compatible = "zmk,behavior-macro";
+            label = "UNDO";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp Z>,
+                <&macro_release>,
+                <&kp LCTRL>;
+        };
+        redo: redo {
+            compatible = "zmk,behavior-macro";
+            label = "REDO";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp Y>,
+                <&macro_release>,
+                <&kp LCTRL>;
+        };
+    };
+
+    behaviors {
+        word: word {
+            compatible = "zmk,behavior-tap-dance";
+            label = "WORD";
+            #binding-cells = <0>;
+            bindings =
+                <&copy>,
+                <&cut>,
+                <&all>;
+        };
+        number: number {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NUMBER";
+            #binding-cells = <0>;
+            bindings =
+                <&mo 1>,
+                <&none>,
+                <&to 1>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -54,19 +175,19 @@
 &kp LSHFT   &kp Z     &kp X     &kp C      &kp V      &kp B                            &kp N      &kp M  &kp COMMA   &kp DOT   &kp LBKT   &kp RBKT
     &mo 4   &mo 2  &kp LGUI  &kp LALT                                                                     &kp FSLH  &kp BSLH  &kp PG_UP  &kp PG_DN
                                        &kp LCTRL                                              &kp RSHFT
-                                                    &none      &none     &none  &kp SPACE
-                                                  &kp ENTER     &none      &none   &kp BSPC
+                                                    &number      &word     &print  &kp SPACE
+                                                  &kp ENTER     &paste      &home   &kp BSPC
             >;
         };
 
         layer_2 {
             bindings = <
-         &none         &none  &kp STAR  &kp FSLH  &kp KP_DOT  &none      &none      &none      &none  &kp KP_DOT  &kp FSLH  &kp STAR         &none      &none
+         &undo         &redo  &kp STAR  &kp FSLH  &kp KP_DOT  &none      &none      &none      &none  &kp KP_DOT  &kp FSLH  &kp STAR         &none      &none
          &none  &kp KP_MINUS    &kp N7    &kp N8      &kp N9  &none  &kp MINUS  &kp EQUAL      &none      &kp N7    &kp N8    &kp N9  &kp KP_MINUS      &none
          &none     &kp SPACE    &kp N4    &kp N5      &kp N6  &none                            &none      &kp N4    &kp N5    &kp N6   &kp KP_PLUS      &none
          &none   &kp KP_PLUS    &kp N1    &kp N2      &kp N3  &none                            &none      &kp N1    &kp N2    &kp N3        &kp UP      &none
 &kp LEFT_SHIFT     &kp LCTRL  &kp BSPC    &kp N0                                                                    &kp N0  &kp LEFT      &kp DOWN  &kp RIGHT
-                                                     &none                                             &none
+                                                     &kp RET                                             &kp RET
                                                               &to 0      &word      &none  &kp SPACE
                                                               &none     &print      &none   &kp BSPC
             >;
