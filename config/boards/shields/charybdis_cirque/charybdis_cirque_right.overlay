@@ -30,7 +30,7 @@
     miso-pin = <13>; // P0.13
     mosi-pin = <24>; // P0.24
     sck-pin = <9>; // P0.09
-    cs-gpios = <&gpio0 10 GPIO_ACTIVE_LOW>; // P0.10
+    cs-gpios = <&gpio0 10>; // P0.10
 
     trackpad: trackpad@2A {
         status = "okay";
