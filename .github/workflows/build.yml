@@ -2,5 +2,5 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: crides/zmk/.github/workflows/build-user-config.yml@main
+    uses: ufun/zmk/.github/workflows/build-user-config.yml@trackpad_dev
     
