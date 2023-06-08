@@ -38,8 +38,7 @@
         reg = <0x2A>;
         label = "Cirque_Trackpad";
 	dr-gpios = <&gpio1 6 GPIO_ACTIVE_HIGH>;// P1.06
-        spi-max-frequency = <1000000>;
-	scaling = <600>;
+        spi-max-frequency = <10000000>;
     };
 };
 
