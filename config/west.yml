@@ -5,7 +5,7 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: trackpad_dev
+      revision: touchbar
       import: app/west.yml
   self:
     path: config
