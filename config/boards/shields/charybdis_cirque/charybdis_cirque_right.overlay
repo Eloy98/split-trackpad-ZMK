@@ -1,43 +1,32 @@
 #include "charybdis_cirque.dtsi"
 
 &default_transform {
-    col-offset = <6>;
+    col-offset = <3>;
 };
 
 &kscan0 {
     diode-direction = "col2row";
     col-gpios
-        = <&pro_micro 1 (GPIO_ACTIVE_HIGH)> // COL0 
-        , <&pro_micro 0 (GPIO_ACTIVE_HIGH)> // COL1 
-        , <&pro_micro 2 (GPIO_ACTIVE_HIGH)> // COL2 
-        , <&pro_micro 3 (GPIO_ACTIVE_HIGH)> // COL3 
-	, <&pro_micro 4 (GPIO_ACTIVE_HIGH)> // COL1 
-        , <&pro_micro 21 (GPIO_ACTIVE_HIGH)> // COL2 
-    ;
+        = <&pro_micro 10 (GPIO_ACTIVE_HIGH)> // COL0 
+        , <&pro_micro 16 (GPIO_ACTIVE_HIGH)> // COL1 
+        , <&pro_micro 14 (GPIO_ACTIVE_HIGH)> // COL2 
 };
-// &nice_nano_spi {
-//     status = "okay";
-// };
-// &trackpad {
-//     status = "okay";
-// };
-
 
 &pro_micro_spi {
     compatible = "nordic,nrf-spim";
     status = "okay";
 
-    miso-pin = <13>; // P0.13
-    mosi-pin = <24>; // P0.24
-    sck-pin = <9>; // P0.09
-    cs-gpios = <&gpio0 10 GPIO_ACTIVE_LOW>; // P0.10
+    miso-pin = <8>; // P0.08
+    mosi-pin = <20>; // P0.20
+    sck-pin = <6>; // P0.06
+    cs-gpios = <&gpio0 15 GPIO_ACTIVE_LOW>; // P0.15
 
     trackpad: trackpad@2A {
         status = "okay";
         compatible = "cirque,pinnacle";
         reg = <0x2A>;
         label = "Cirque_Trackpad";
-	dr-gpios = <&gpio1 6 GPIO_ACTIVE_HIGH>;// P1.06
+	dr-gpios = <&gpio0 17 GPIO_ACTIVE_HIGH>;// P0.17
         spi-max-frequency = <10000000>;
     };
 };
