@@ -3,8 +3,8 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#define L_MOUSE 1
-#define L_SCROLL 2
+#define MOUSE 1
+#define SCROLL 2
 
 // mouse move settings
 
