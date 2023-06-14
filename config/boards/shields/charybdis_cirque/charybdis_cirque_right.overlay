@@ -10,7 +10,7 @@
         = <&pro_micro 10 (GPIO_ACTIVE_HIGH)> // COL0 
         , <&pro_micro 16 (GPIO_ACTIVE_HIGH)> // COL1 
         , <&pro_micro 14 (GPIO_ACTIVE_HIGH)> // COL2 
-};
+}
 
 &pro_micro_spi {
     compatible = "nordic,nrf-spim";
