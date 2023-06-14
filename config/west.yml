@@ -1,11 +1,11 @@
 manifest:
   remotes:
     - name: zmkfirmware
-      url-base: https://github.com/ALpotato
+      url-base: https://github.com/ufan
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: EricDracula-trackpad
+      revision: trackpad_dev
       import: app/west.yml
   self:
     path: config
