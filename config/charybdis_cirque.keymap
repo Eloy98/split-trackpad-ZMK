@@ -1,8 +1,7 @@
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/mouse.h>
 
 // mouse move settings
 
@@ -43,7 +42,7 @@
         mouse {
             label = "MSE";
             bindings = <
-&none  &none  &none  &mmv MMV_U  &mwh MWH_U  &mkp LCLK
+&bt BT_CLR  &bt BT_SEL 0  &out OUT_BLE  &mmv MMV_U  &mwh MWH_U  &mkp LCLK
             >;
         };
     };
