@@ -42,7 +42,7 @@
         mouse {
             label = "MSE";
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &out OUT_BLE  //&mmv MMV_U  //&mwh MWH_U  //&mkp LCLK  &kp CAPS  &none  &none
+&bt BT_CLR  &bt BT_SEL 0  &out OUT_BLE  &kp CAPS  &none  &none  //&mmv MMV_U  //&mwh MWH_U  //&mkp LCLK  &kp CAPS  &none  &none
             >;
         };
     };
