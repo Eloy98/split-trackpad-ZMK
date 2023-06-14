@@ -2,5 +2,5 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: ufan/zmk/.github/workflows/build-user-config.yml@trackpad_dev
+    uses: ufan/zmk/.github/workflows/build-user-config.yml@touchbar
     
