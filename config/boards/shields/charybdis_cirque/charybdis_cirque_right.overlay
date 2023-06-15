@@ -13,7 +13,7 @@
         ;
 };
 
-&pro_micro_spi {
+&nrfmicro_13_spi {
     compatible = "nordic,nrf-spim";
     status = "okay";
     miso-pin = <8>; // P0.08
