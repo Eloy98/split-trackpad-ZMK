@@ -13,7 +13,7 @@
         ;
 };
 
-&spi0 {
+&pro_micro_spi {
     compatible = "nordic,nrf-spim";
     status = "okay";
     miso-pin = <8>; // P0.08
@@ -21,7 +21,7 @@
     sck-pin = <6>; // P0.06
     cs-gpios = <&gpio0 15 GPIO_ACTIVE_LOW>; // P0.15
 
-    trackpad: trackpad@0 {
+    trackball: trackball@0 {
         status = "okay";
         compatible = "cirque,pinnacle";
         reg = <0>;
