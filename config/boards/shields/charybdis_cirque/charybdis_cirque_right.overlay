@@ -16,9 +16,9 @@
 &pro_micro_spi {
     compatible = "nordic,nrf-spim";
     status = "okay";
-    miso-pin = <8>; // P0.08
+    miso-pin = <13>; // P0.13
     mosi-pin = <20>; // P0.20
-    sck-pin = <6>; // P0.06
+    sck-pin = <24>; // P0.24
     cs-gpios = <&gpio0 15 GPIO_ACTIVE_LOW>; // P0.15
 
     trackpad: trackpad@0 {
