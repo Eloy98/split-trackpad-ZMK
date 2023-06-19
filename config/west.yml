@@ -1,10 +1,10 @@
 manifest:
   remotes:
-    - name: jgreel
+    - name: zmkfirmware
       url-base: https://github.com/ufan
   projects:
     - name: zmk
-      remote: jgreel
+      remote: zmkfirmware
       revision: blade
       import: app/west.yml
   self:
