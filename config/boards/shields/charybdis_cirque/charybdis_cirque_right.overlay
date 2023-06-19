@@ -13,6 +13,12 @@
         ;
 };
 
+/* Configure trackballs (either split can have the trackball) */
+    trackballs {
+		compatible = "zmk,keymap-trackballs";
+		trackballs = <&trackball>;
+        };
+
 &pro_micro_spi {
     compatible = "nordic,nrf-spim";
     status = "okay";
