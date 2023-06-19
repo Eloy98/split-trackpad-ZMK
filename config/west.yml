@@ -1,11 +1,11 @@
 manifest:
   remotes:
     - name: jgreel
-      url-base: https://github.com/jgreel
+      url-base: https://github.com/ufan
   projects:
     - name: zmk
       remote: jgreel
-      revision: mouse-ftc-cirque
+      revision: blade
       import: app/west.yml
   self:
     path: config
