@@ -13,31 +13,6 @@
         ;
 };
 
-/* Configure trackballs (either split can have the trackball) */
-    trackballs {
-		compatible = "zmk,keymap-trackballs";
-		trackballs = <&trackball>;
-        };
-
-&pro_micro_spi {
-    compatible = "nordic,nrf-spim";
-    status = "okay";
-    miso-pin = <13>; // P0.13
-    mosi-pin = <20>; // P0.20
-    sck-pin = <24>; // P0.24
-    cs-gpios = <&gpio0 15 GPIO_ACTIVE_LOW>; // P0.15
-
-    trackball: trackball@0 {
-        status = "okay";
-        compatible = "cirque,pinnacle";
-        reg = <0>;
-        label = "cirque trackpad";
-	dr-gpios = <&gpio0 17 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;// P0.17
-        spi-max-frequency = <1000000>;
-        /* sleep; */
-    };
-};
-
 
 
 
