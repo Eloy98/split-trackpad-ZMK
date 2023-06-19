@@ -21,7 +21,7 @@
     sck-pin = <24>; // P0.24
     cs-gpios = <&gpio0 15 GPIO_ACTIVE_LOW>; // P0.15
 
-    trackpad: trackpad@0 {
+    trackball: trackball@0 {
         status = "okay";
         compatible = "cirque,pinnacle";
         reg = <0>;
