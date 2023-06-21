@@ -35,6 +35,7 @@ RC(0,0) RC(0,1) RC(0,2) RC(0,3) RC(0,4) RC(0,5)
 &pro_micro_spi {
     compatible = "nordic,nrf-spim";
     status = "okay";
+    sck-pin = <24>; // P0.24
     cs-gpios = <&gpio0 15 GPIO_ACTIVE_LOW>; // P0.15
 
     trackball: trackball@0 {
