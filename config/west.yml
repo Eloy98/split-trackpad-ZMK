@@ -1,11 +1,11 @@
 manifest:
   remotes:
     - name: zmkfirmware
-      url-base: https://github.com/ufan
+      url-base: https://github.com/crides
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: blade
+      revision: fusion-led-c-config
       import: app/west.yml
   self:
     path: config
