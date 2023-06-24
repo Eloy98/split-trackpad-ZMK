@@ -12,6 +12,9 @@
         , <&pro_micro 14 (GPIO_ACTIVE_HIGH)> // COL2 
         ;
 };
+&i2c0 {
+    status = "okay";
+    compatible = "nordic,nrf-spim";
 
     trackpad@2a {
 	compatible = "cirque,pinnacle";
@@ -23,8 +26,6 @@
 	    //sleep;
 	    //no-taps;
     };
-&i2c0 {
-    status = "okay";
 };
 
 
