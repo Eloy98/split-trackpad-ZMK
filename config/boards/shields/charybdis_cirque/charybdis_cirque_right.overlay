@@ -1,15 +1,12 @@
-#include "charybdis_cirque.dtsi"
+#include "charybdis_cirque.dtsi" // Notice that the main dtsi files are included in the overlay.
 
-&default_transform {
-	col-offset = <3>;
-};
+
 
 &kscan0 {
     diode-direction = "col2row";
-        col-gpios
-            = <&pro_micro 10 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 16 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 14 GPIO_ACTIVE_HIGH>
-            ;
-	    
+    col-gpios
+        = <&pro_micro 14 (GPIO_ACTIVE_HIGH)> // COL0 
+        , <&pro_micro 16 (GPIO_ACTIVE_HIGH)> // COL1 
+        , <&pro_micro 10 (GPIO_ACTIVE_HIGH)> // COL2 
+        ;
 };
