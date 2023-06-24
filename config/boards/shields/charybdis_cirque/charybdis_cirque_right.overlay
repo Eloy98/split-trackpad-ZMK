@@ -13,8 +13,6 @@
         ;
 };
 
-&i2c0 {
-    status = "okay";
     trackpad@2a {
 	compatible = "cirque,pinnacle";
         status = "okay";
@@ -25,6 +23,8 @@
 	    //sleep;
 	    //no-taps;
     };
+&i2c0 {
+    status = "okay";
 };
 
 
