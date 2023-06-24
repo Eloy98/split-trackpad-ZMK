@@ -1,15 +1,14 @@
-#include "charybdis_cirque.dtsi"
+#include "redox_manuform.dtsi"
 
 &default_transform {
-    col-offset = <3>;
+	col-offset = <7>;
 };
 
 &kscan0 {
-    diode-direction = "col2row";
-    col-gpios
-        = <&pro_micro 10 (GPIO_ACTIVE_HIGH)> // COL0 
-        , <&pro_micro 16 (GPIO_ACTIVE_HIGH)> // COL1 
-        , <&pro_micro 14 (GPIO_ACTIVE_HIGH)> // COL2 
-        ;
+        col-gpios
+            = <&pro_micro 10 GPIO_ACTIVE_HIGH>
+            , <&pro_micro 16 GPIO_ACTIVE_HIGH>
+            , <&pro_micro 14 GPIO_ACTIVE_HIGH>
+            ;
+	    
 };
-
