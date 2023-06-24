@@ -13,14 +13,17 @@
         ;
 };
 
-&pro_micro_spi {
+&i2c0 {
     status = "okay";
-};
-
-&trackball {
-    status = "okay";
-};
-
+    trackpad@2a {
+	    compatible = "cirque,pinnacle";
+	    reg = <0x2a>;
+	    label = "Cirque_Trackpad";
+        dr-gpios = <&pro_micro 4 GPIO_ACTIVE_HIGH>;
+	    //rotate-90;
+	    //sleep;
+	    //no-taps;
+    };
 
 
 
